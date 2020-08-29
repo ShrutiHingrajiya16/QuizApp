@@ -30,7 +30,6 @@ public class CommonUtils {
     public static boolean isNetworkAvailable(Context context) {
         try {
             ConnectivityManager conMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
             return conMgr.getActiveNetworkInfo() != null && conMgr.getActiveNetworkInfo().isAvailable() && conMgr.getActiveNetworkInfo().isConnected();
         } catch (Exception e) {
             e.printStackTrace();
